@@ -12,6 +12,11 @@ namespace cmake_test {
 		double  operator[](int n) const;
 		double& operator[](int n);
 
+		auto begin();
+		auto begin() const;
+		auto end();
+		auto end() const;
+
 	private:
 		std::vector<double> vec;
 	};

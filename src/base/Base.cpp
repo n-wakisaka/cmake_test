@@ -7,18 +7,10 @@ void Base::resize(int n){
 	vec.resize(n);
 }
 
-auto Base::begin(){
-	return vec.begin();
+double  Base::operator[](int n) const {
+	return vec[n];
 }
 
-auto Base::begin() const {
-	return vec.cbegin();
-}
-
-auto Base::end(){
-	return vec.end();
-}
-
-auto Base::end() const {
-	return vec.cend();
+double& Base::operator[](int n){
+	return vec[n];
 }

@@ -9,7 +9,7 @@ set(headers
 	)
 
 # ターゲット名
-set(target cmake_test2_base)
+set(target cmake_test_base)
 
 # ターゲットを共有ライブラリとしてコンパイル
 # 自動的に -fPIC オプション付きでコンパイルされる
@@ -17,9 +17,7 @@ add_library(${target} SHARED ${sources} ${headers})
 
 # 出力先を指定
 set_target_properties(${target} PROPERTIES
-	LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib
-	ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib
-  RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+	LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 
 
 # 共有ライブラリの一般設定

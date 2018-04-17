@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.1)
-project(cmake_test2)
+set(PROJECT_NAME cmake_test)
+project(${PROJECT_NAME})
 
 # バージョン名
 set(TEST_MAJOR_VERSION 0)
@@ -18,7 +19,7 @@ if (NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE "Release")
 endif()
 # ヘッダをインストールするディレクトリ名
-set(INSTALL_HEADER_DIR "include/cmake_test2")
+set(INSTALL_HEADER_DIR "include/${PROJECT_NAME}")
 
 # function
 # target "header.h header2.h ..."

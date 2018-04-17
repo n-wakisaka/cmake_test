@@ -1,9 +1,9 @@
-#ifndef __CMAKE_TEST2_BASE_H__
-#define __CMAKE_TEST2_BASE_H__
+#ifndef __CMAKE_TEST_BASE_H__
+#define __CMAKE_TEST_BASE_H__
 
 #include <vector>
 
-namespace cmake_test2 {
+namespace cmake_test {
 
 	class Base {
 	public:
@@ -18,4 +18,4 @@ namespace cmake_test2 {
 
 }
 
-#endif // __CMAKE_TEST2_BASE_H__
+#endif // __CMAKE_TEST_BASE_H__

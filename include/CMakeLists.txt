@@ -1,5 +1,5 @@
 # 公開するヘッダ
-file(GLOB public_headers "cmake_test2/*")
+file(GLOB public_headers "${PROJECT_NAME}/*")
 foreach(file ${public_headers})
   if(NOT IS_DIRECTORY ${file})
 		# PREFIXのINSTALL_HEADER_DIRにヘッダをインストール

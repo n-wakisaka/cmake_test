@@ -46,6 +46,15 @@ function(setting_library target)
 
 endfunction()
 
+include_directories(${PROJECT_SOURCE_DIR})
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
+link_directories(${PROJECT_BINARY_DIR}/lib)
 
 add_subdirectory(src)
 add_subdirectory(include)
+
+option(ENABLE_EXAMPLES "Enable examples in the example directory" ON)
+if(ENABLE_EXAMPLES)
+  add_subdirectory(example)
+endif()

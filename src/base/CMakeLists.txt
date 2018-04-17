@@ -9,7 +9,7 @@ set(headers
 	)
 
 # ターゲット名
-set(target cmake_test_base)
+set(target CMakeTestBase)
 
 # ターゲットを共有ライブラリとしてコンパイル
 # 自動的に -fPIC オプション付きでコンパイルされる

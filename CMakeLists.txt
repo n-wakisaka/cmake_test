@@ -16,7 +16,10 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # ビルドタイプデフォルトはReleaseに
 if (NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE "Release")
+	set(
+    CMAKE_BUILD_TYPE Release CACHE STRING
+    "Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel."
+    FORCE)
 endif()
 # ヘッダをインストールするディレクトリ名
 set(INSTALL_HEADER_DIR "include/${PROJECT_NAME}")
@@ -31,7 +34,6 @@ function(setting_library target)
 	# RUNTIMEは実行ファイル，LIBRARYは.soファイルが対応している
 	# configurationsはどのビルドタイプの場合かを指定，この場合すべて
   install(TARGETS ${target}
-    RUNTIME DESTINATION bin CONFIGURATIONS Release Debug RelWithDebInfo MinSizeRel
     LIBRARY DESTINATION lib CONFIGURATIONS Release Debug RelWithDebInfo MinSizeRel)
 
 	# ヘッダのインストール指定

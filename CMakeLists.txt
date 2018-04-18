@@ -58,3 +58,5 @@ option(ENABLE_EXAMPLES "Enable examples in the example directory" ON)
 if(ENABLE_EXAMPLES)
   add_subdirectory(example)
 endif()
+
+add_subdirectory(misc)
